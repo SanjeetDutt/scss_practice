@@ -1,6 +1,6 @@
 @mixin col-basic-def{
-  background-color: orangered;
-  color: #fff;
+  //background-color: orangered;
+  //color: #fff;
   padding: 10px ;
   float: left;
 
@@ -11,7 +11,7 @@
 
 .row{
   max-width: $grid-width;
-  background-color: #eee;
+  //background-color: #eee;
   margin: 0 auto;
   display: flex;
 
