@@ -13,19 +13,18 @@ GLOBAL VARIABLES
 /**
 BASE DEFINATION WHICH IS COMMON ACCROSS ALL PAGES
  */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
 /*THIS WILL INHERET BY ALL CHILD ELEMENT*/
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 30px; }
+  padding: 30px;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
 
 /**
 COMMON ANIMATIONS
@@ -61,6 +60,13 @@ COMMON ANIMATIONS
 /**
 COMMON TYPOGRAPHY
  */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777; }
+
 /**
 COMMON UTILITIES
  */
@@ -155,6 +161,62 @@ COMMON UTILITIES
     /*Position will find last relative position*/
     top: 40px;
     left: 40px; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+  display: flex; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row .col-1-of-2 {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+    float: left;
+    width: calc( 1 * ( 100% - 6rem) / 2); }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-3 {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+    float: left;
+    width: calc( 1 * ( 100% - 6rem) / 3); }
+    .row .col-1-of-3:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-2-of-3 {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+    float: left;
+    width: calc( 2 * ( 100% - 6rem) / 3); }
+    .row .col-2-of-3:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-4 {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+    float: left;
+    width: calc( 1 * ( 100% - 6rem) / 4); }
+    .row .col-1-of-4:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-2-of-4 {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+    float: left;
+    width: calc( 2 * ( 100% - 6rem) / 4); }
+    .row .col-2-of-4:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-3-of-4 {
+    background-color: orangered;
+    color: #fff;
+    padding: 10px;
+    float: left;
+    width: calc( 3 * ( 100% - 6rem) / 4); }
+    .row .col-3-of-4:not(:last-child) {
+      margin-right: 6rem; }
 
 /**
 PAGE SPECIFIED FILE (LIKE HOMEPAGE)

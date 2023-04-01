@@ -1,20 +1,16 @@
 /**
 BASE DEFINATION WHICH IS COMMON ACCROSS ALL PAGES
  */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 /*THIS WILL INHERET BY ALL CHILD ELEMENT*/
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: $color-gray-dark;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 html{
