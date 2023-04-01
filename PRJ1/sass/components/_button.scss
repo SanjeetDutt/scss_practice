@@ -1,0 +1,53 @@
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba($color-black, .2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba($color-black, .2);
+}
+
+.btn-white {
+  background-color: $color-white;
+  color: $color-gray-dark;
+  padding: 15px 40px;
+}
+
+/* THIS :after IS CHILD OF BUTTON */
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  transition: all ease-in-out .2s;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-white::after {
+  background-color: $color-white;
+}
+
+.btn-animate {
+  animation: moveInBottom ease-in-out 1s .75s;
+  animation-fill-mode: backwards; /*FILL MODE HELPS TO HIDE CONTENT BEFORE ANIMATION HAPPENS Ex. IN CASE OF ANIMATION DELAY*/
+}
