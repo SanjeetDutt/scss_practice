@@ -1,3 +1,12 @@
 /**
 GLOBAL MIXINS
  */
+
+@mixin gradient-font-color{
+  /*SETTING GRADIENT FONT COLOR START*/
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  /*SETTING GRADIENT FONT COLOR END*/
+}

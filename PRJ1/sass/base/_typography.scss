@@ -15,12 +15,7 @@ body{
   text-transform: uppercase;
   font-weight: 700;
 
-  /*SETTING GRADIENT FONT COLOR START*/
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  display: inline-block;
-  -webkit-background-clip: text;
-  color: transparent;
-  /*SETTING GRADIENT FONT COLOR END*/
+  @include gradient-font-color;
 
   letter-spacing: 2px;
   transition: all .2s;
